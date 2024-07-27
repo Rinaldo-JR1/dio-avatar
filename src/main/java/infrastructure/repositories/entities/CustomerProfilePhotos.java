@@ -15,7 +15,7 @@ public class CustomerProfilePhotos {
     CompositeKey compositeKey;
 
     @Column(name = "original_photo")
-    String originPhoto;
+    String originalPhoto;
 
     @Column(name = "generated_photo")
     String generatedPhoto;
@@ -33,7 +33,7 @@ public class CustomerProfilePhotos {
     public Customer toDomain() {
         return new Customer(compositeKey.customerId,
                 List.of(new ProfilePhoto(compositeKey.id,
-                        originPhoto,
+                        originalPhoto,
                         generatedPhoto)));
     }
 
@@ -44,7 +44,7 @@ public class CustomerProfilePhotos {
         entity.compositeKey.customerId = customerId;
         entity.compositeKey.id = profilePhoto.id();
 
-        entity.originPhoto = profilePhoto.originPhoto();
+        entity.originalPhoto = profilePhoto.originPhoto();
         entity.generatedPhoto = profilePhoto.generatedPhoto();
 
         return entity;

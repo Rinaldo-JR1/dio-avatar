@@ -18,8 +18,8 @@ public class ApplicationService {
         this.profilePhotoCreateService = profilePhotoCreateService;
 
     }
-    public Customer getCustomer(String custumerId){
-        return Customer.fromDomain(customerReadService.findById(custumerId));
+    public Customer getCustomer(String customerId){
+        return Customer.fromDomain(customerReadService.findById(customerId));
     }
     public void persistProfilePhoto(String customerId, ProfilePhoto dto){
         profilePhotoCreateService.save(customerId,dto.toDomain());
