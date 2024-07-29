@@ -17,10 +17,8 @@ import java.nio.file.Path;
 import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 
-import java.nio.file.Path;
-import java.time.Duration;
 import java.util.Base64;
-import java.util.concurrent.CompletableFuture;
+
 @ApplicationScoped
 public class S3ProfilePhotoStorageRepository implements ProfilePhotoStorageRepository {
     private final S3AsyncClient s3;
