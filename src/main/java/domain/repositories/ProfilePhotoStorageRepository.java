@@ -4,5 +4,5 @@ import domain.models.ProfilePhoto;
 import io.smallrye.mutiny.Uni;
 
 public interface ProfilePhotoStorageRepository {
-    Uni<String> sotre(String customerId, ProfilePhoto profilePhoto);
+    Uni<String> store(String customerId, ProfilePhoto profilePhoto);
 }
