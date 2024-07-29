@@ -1,17 +1,17 @@
 package infrastructure.repositories;
 
 import domain.models.ProfilePhoto;
-import domain.repositories.ProfilePhotoRepository;
+import domain.repositories.ProfilePhotoRepositoryPersistence;
 import infrastructure.repositories.entities.CustomerProfilePhotos;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
 
 @ApplicationScoped
-public class HibernateProfilePhotoRepository implements ProfilePhotoRepository {
+public class HibernateProfilePhotoRepositoryPersistence implements ProfilePhotoRepositoryPersistence {
     private final EntityManager entityManager;
 
-    public HibernateProfilePhotoRepository(EntityManager entityManager) {
+    public HibernateProfilePhotoRepositoryPersistence(EntityManager entityManager) {
         this.entityManager = entityManager;
     }
 

@@ -2,7 +2,6 @@ package domain.services;
 
 import domain.models.Customer;
 import domain.repositories.CustomerRepository;
-import domain.repositories.ProfilePhotoRepository;
 import jakarta.enterprise.context.ApplicationScoped;
 
 import java.util.List;

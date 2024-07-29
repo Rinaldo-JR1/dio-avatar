@@ -2,7 +2,7 @@ package domain.repositories;
 
 import domain.models.ProfilePhoto;
 
-public interface ProfilePhotoRepository {
+public interface ProfilePhotoRepositoryPersistence {
     void save(String customerId, ProfilePhoto profilePhoto);
 
 }
